@@ -1,0 +1,74 @@
+Algorithm: To-Do App
+
+1. Start
+
+2. Initialize Flag = True
+
+3. Create empty lists:
+   T_List for pending tasks
+   C_List for completed tasks
+   M_List for marked tasks
+   D_List for deleted tasks
+
+4. Create dictionary:
+   todo = {"Task": T_List}
+
+5. While Flag is True do:
+
+6. Display menu:
+   1. Add Task
+   2. Add Completed Task
+   3. View Pending Task
+   4. Mark Task
+   5. Delete Task
+   6. View All Task
+   7. Exit
+
+7. Take user choice
+
+8. If choice == 1:
+      Ask how many tasks to add
+      Repeat for given number:
+           Take task input
+           Add task to T_List
+      Update todo dictionary
+      Print "Task Added"
+
+9. Else if choice == 2:
+      Ask completed task
+      If task exists in T_List:
+           Add task to C_List
+           Remove task from T_List
+      Update todo dictionary
+
+10. Else if choice == 3:
+       Display all tasks from T_List with numbering
+
+11. Else if choice == 4:
+       Ask task to mark
+       If task in T_List or C_List:
+            Add task to M_List
+            Print marked message
+
+12. Else if choice == 5:
+       Ask task to delete
+       If task in M_List and T_List:
+            Remove from both lists
+       Else if task in M_List and C_List:
+            Remove from both lists
+       Else if task in T_List:
+            Remove from T_List
+       Else if task in C_List:
+            Remove from C_List
+
+13. Else if choice == 6:
+       Display all pending tasks from T_List
+       Display all completed tasks from C_List
+       Display all marked tasks from M_List
+       If any list is empty print message
+
+14. Else if choice == 7:
+       Print exit message
+       Set Flag = False
+
+15. Stop
